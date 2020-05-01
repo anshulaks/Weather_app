@@ -6,8 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.2/css/bulma.min.css" />
     <link rel="shortcut icon" href="https://cdn3.iconfinder.com/data/icons/bebreezee-weather-symbols/691/icon-weather-sunsleetlight-512.png" type="image/x-icon">
+    <style>
+        .box {
+          padding: 5px;
+          background-color: #34c9eb;
+          transition: transform .2s;
+          width: 290px;
+          height: 125px;
+          margin: 0 auto;
+        }
+        
+        .box:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+        .field_has-addons:hover{
+            -ms-transform: scale(1.15); /* IE 9 */
+          -webkit-transform: scale(1.15); /* Safari 3-8 */
+          transform: scale(1.15); 
+        }
+
+        body {
+  background-image: url('1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+        </style>
 </head>
 
 <body>
@@ -26,7 +54,7 @@
                 <div class="column is-offset-4 is-4">
                     <form method="POST">
                         {% csrf_token %}
-                        <div class="field has-addons">
+                        <div class="field_has-addons">
                             <div class="control is-expanded">
                                 {{ form.name }}
                             </div>
